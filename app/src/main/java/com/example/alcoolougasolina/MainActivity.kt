@@ -12,17 +12,22 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     private var percent:Double = 0.7
-    private val btCalc: Button = findViewById(R.id.btCalcular)
-    @SuppressLint("UseSwitchCompatOrMaterialCode")
-    private val switchPercent: Switch = findViewById(R.id.swPercent)
-    private val edGas: EditText = findViewById(R.id.edGas)
-    private val edAlcohol: EditText = findViewById(R.id.edAlcohol)
-    private val result: TextView = findViewById(R.id.edResult)
+    private lateinit var btCalc: Button
+    private lateinit var switchPercent: Switch
+    private lateinit var edGas: EditText
+    private lateinit var edAlcohol: EditText
+    private lateinit var result: TextView
 
-    @SuppressLint("UseSwitchCompatOrMaterialCode", "SetTextI18n", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Initialize UI elements after setContentView
+        btCalc = findViewById(R.id.btCalcular)
+        switchPercent = findViewById(R.id.swPercent)
+        edGas = findViewById(R.id.edGas)
+        edAlcohol = findViewById(R.id.edAlcohol)
+        result = findViewById(R.id.edResult)
         Log.d("PDM23","No onCreate, $percent")
 
         btCalc.setOnClickListener(View.OnClickListener {
