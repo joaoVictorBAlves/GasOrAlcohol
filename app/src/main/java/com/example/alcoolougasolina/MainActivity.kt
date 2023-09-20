@@ -9,37 +9,37 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.TextView
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
-    var percentual:Double = 0.7
+    private var percent:Double = 0.7
+    private val btCalc: Button = findViewById(R.id.btCalcular)
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    private val switchPercent: Switch = findViewById(R.id.swPercent)
+    private val edGas: EditText = findViewById(R.id.edGas)
+    private val edAlcohol: EditText = findViewById(R.id.edAlcohol)
+    private val result: TextView = findViewById(R.id.edResult)
+
     @SuppressLint("UseSwitchCompatOrMaterialCode", "SetTextI18n", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("PDM23","No onCreate, $percentual")
-
-        val btCalc: Button = findViewById(R.id.btCalcular)
-        val switchPercent: Switch = findViewById(R.id.swPercentual)
-        val edGasolina: EditText = findViewById(R.id.edGasolina)
-        val edAlcool: EditText = findViewById(R.id.edAlcool)
-        val resultado: TextView = findViewById(R.id.resultado)
+        Log.d("PDM23","No onCreate, $percent")
 
         btCalc.setOnClickListener(View.OnClickListener {
-            resultado.setText("")
-            if (edGasolina.text.isNotEmpty() && edAlcool.text.isNotEmpty()) {
-                var alcool: Double = edAlcool.text.toString().toDouble()
-                var gasolina: Double = edGasolina.text.toString().toDouble()
-                if (alcool <= gasolina*percentual) {
-                    resultado.setText("Melhor comprar Álcool")
+            result.text = ""
+            if (edGas.text.isNotEmpty() && edAlcohol.text.isNotEmpty()) {
+                val alcohol: Double = edAlcohol.text.toString().toDouble()
+                val gas: Double = edGas.text.toString().toDouble()
+                if (alcohol <= gas * percent) {
+                    result.text = "It's better to buy Alcohol"
                 } else {
-                    resultado.setText("Melhor comprar Gasolina")
+                    result.text = "It's better to buy Gas"
                 }
             }
         })
 
         switchPercent.setOnClickListener(View.OnClickListener {
-            percentual = if(percentual == 0.70){
+            percent = if(percent == 0.70){
                 0.75
             }else{
                 0.70
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 override fun onResume(){
     super.onResume()
-    Log.d("PDM23","No onResume, $percentual")
+    Log.d("PDM23","No onResume, $percent")
 }
 override fun onStart(){
     super.onStart()
