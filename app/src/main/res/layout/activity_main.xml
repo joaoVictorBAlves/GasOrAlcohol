@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#004FB3"
+    style="@style/SCREEN"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="600dp"
         android:background="@drawable/rounded_layout"
-        android:backgroundTint="?android:backgroundTint"
+        style="@style/FORM"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +38,8 @@
             android:layout_marginBottom="10dp"
             android:text="Gas or Alcohol?"
             android:textAlignment="center"
-            android:textColor="#FEA400"
             android:textSize="34sp"
+            style="@style/TITLE"
             android:textStyle="bold" />
 
         <EditText
@@ -49,14 +48,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="60px"
             android:layout_marginBottom="20px"
-            android:backgroundTint="#FEA400"
+            style="@style/INPUT"
             android:hint="Enter with gas price"
             android:inputType="numberDecimal"
-            android:outlineAmbientShadowColor="#4FC3F7"
-            android:outlineProvider="bounds"
-            android:outlineSpotShadowColor="#CA584C"
-            android:textColor="#000000"
-            android:textColorHint="#FEA400" />
+            android:outlineProvider="bounds" />
 
         <EditText
             android:id="@+id/edAlcohol"
@@ -65,14 +60,11 @@
             android:layout_marginHorizontal="60px"
             android:layout_marginTop="20px"
             android:layout_marginBottom="20px"
-            android:backgroundTint="#FEA400"
+            style="@style/INPUT"
             android:ems="10"
             android:hint="Enter with alcohol price"
             android:inputType="numberDecimal"
-            android:outlineAmbientShadowColor="#4FC3F7"
-            android:outlineProvider="bounds"
-            android:outlineSpotShadowColor="#CA584C"
-            android:textColorHint="#FEA400" />
+            android:outlineProvider="bounds" />
 
         <LinearLayout
             android:layout_width="305dp"
@@ -90,18 +82,17 @@
                 android:layout_marginVertical="10px"
                 android:layout_weight="1"
                 android:text="Chose the factor"
-                android:textColor="#402900"
-                android:textSize="16sp" />
+                style="@style/SWITCH" />
 
             <Switch
                 android:id="@+id/swPercent"
                 android:layout_width="wrap_content"
                 android:layout_height="14dp"
                 android:layout_gravity="right"
+                android:backgroundTint="#000000"
                 android:text="75%"
-                android:textColor="#402900"
-                android:textColorHighlight="#004FB2"
-                android:textColorLink="#004FB2"
+                android:textColorHighlight="#80FDA300"
+                android:textColorLink="#FDA300"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         </LinearLayout>
@@ -112,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="20dp"
-            android:backgroundTint="#FDA300"
+            style="@style/BUTTON"
             android:text="Calcular" />
 
         <TextView
@@ -122,8 +113,7 @@
             android:layout_marginLeft="60px"
             android:layout_marginTop="30px"
             android:textAlignment="center"
-            android:textColor="#004FB2"
-            android:textColorHint="#004FB2"
+            style="@style/RESPONSE"
             android:textFontWeight="@android:integer/config_longAnimTime"
             android:textSize="16sp" />
 

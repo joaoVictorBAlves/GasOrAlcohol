@@ -1,6 +1,5 @@
 package com.example.alcoolougasolina
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         edGas = findViewById(R.id.edGas)
         edAlcohol = findViewById(R.id.edAlcohol)
         result = findViewById(R.id.edResult)
-        Log.d("PDM23","No onCreate, $percent")
 
         btCalc.setOnClickListener(View.OnClickListener {
             result.text = ""
@@ -51,24 +49,27 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-override fun onResume(){
-    super.onResume()
-    Log.d("PDM23","No onResume, $percent")
-}
-override fun onStart(){
-    super.onStart()
-    Log.d("PDM23","No onResume")
-}
-override fun onPause(){
-    super.onPause()
-    Log.d("PDM23","No onResume")
-}
-override fun onStop(){
-    super.onStop()
-    Log.d("PDM23","No onResume")
-}
-override fun onDestroy(){
-    super.onDestroy()
-    Log.d("PDM23","No onResume")
-}
+    /**
+     *  Methods that saves instances of app state
+     * */
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("gasValue", edGas.text.toString())
+        outState.putString("alcoholValue", edAlcohol.text.toString())
+        outState.putBoolean("switchState", switchPercent.isChecked)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val savedGasValue = savedInstanceState.getString("gasValue")
+        val savedAlcoholValue = savedInstanceState.getString("alcoholValue")
+        Log.d("INSTANCE", "$savedGasValue and $savedAlcoholValue")
+        edGas.setText(savedGasValue)
+        edAlcohol.setText(savedAlcoholValue)
+
+        // Restaurar o estado do Switch
+        val switchState = savedInstanceState.getBoolean("switchState")
+        switchPercent.isChecked = switchState
+    }
+
 }
