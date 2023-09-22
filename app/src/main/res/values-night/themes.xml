@@ -7,27 +7,27 @@
     </style>
 
     <style name="SCREEN">
-        <item name="android:background">#002C66</item>
+        <item name="android:background">#001E45</item>
     </style>
 
     <style name="FORM">
         <item name="android:backgroundTint">#001E45</item>
-        <item name="colorSecondary">#A6A6A6</item>
+        <item name="colorSecondary">#FFF</item>
     </style>
 
     <style name="TITLE">
-        <item name="android:textColor">#D6D4D4</item>
+        <item name="android:textColor">#FFF</item>
     </style>
 
     <style name="INPUT">
-        <item name="android:color">#A6A6A6</item>
-        <item name="android:backgroundTint">#A6A6A6</item>
-        <item name="android:textColorHint">#A6A6A6</item>
+        <item name="android:color">#AAAAAA</item>
+        <item name="android:backgroundTint">#FFF</item>
+        <item name="android:textColorHint">#AAAAAA</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="SWITCH">
-        <item name="android:textColor">#A6A6A6</item>
+        <item name="android:textColor">#AAAAAA</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColorHighlight">#004FB2</item>
         <item name="android:textColorLink">#004FB2</item>

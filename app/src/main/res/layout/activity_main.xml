@@ -27,6 +27,8 @@
             android:contentDescription="uma bomba de gasolina ilustrando o app"
             android:paddingVertical="10dp"
             android:textAlignment="center"
+            style="@style/LOGO"
+            android:visibility="visible"
             app:srcCompat="@mipmap/icon" />
 
         <TextView
@@ -86,34 +88,35 @@
 
             <Switch
                 android:id="@+id/swPercent"
+                style="@style/SWITCH"
                 android:layout_width="wrap_content"
                 android:layout_height="14dp"
                 android:layout_gravity="right"
                 android:backgroundTint="#000000"
+                android:checked="false"
                 android:text="75%"
-                android:textColorHighlight="#80FDA300"
-                android:textColorLink="#FDA300"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
+
 
         </LinearLayout>
 
         <Button
             android:id="@+id/btCalcular"
+            style="@style/BUTTON"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="20dp"
-            style="@style/BUTTON"
-            android:text="Calcular" />
+            android:text="Calculate" />
 
         <TextView
             android:id="@+id/edResult"
+            style="@style/RESPONSE"
             android:layout_width="306dp"
             android:layout_height="35dp"
             android:layout_marginLeft="60px"
             android:layout_marginTop="30px"
             android:textAlignment="center"
-            style="@style/RESPONSE"
             android:textFontWeight="@android:integer/config_longAnimTime"
             android:textSize="16sp" />
 
