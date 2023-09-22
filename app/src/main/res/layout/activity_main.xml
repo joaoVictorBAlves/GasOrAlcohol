@@ -20,28 +20,28 @@
 
         <ImageView
             android:id="@+id/imageView"
+            style="@style/LOGO"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50px"
             android:contentDescription="uma bomba de gasolina ilustrando o app"
             android:paddingVertical="10dp"
             android:textAlignment="center"
-            style="@style/LOGO"
             android:visibility="visible"
             app:srcCompat="@mipmap/icon" />
 
         <TextView
             android:id="@+id/edTitle"
+            style="@style/TITLE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30px"
+            android:layout_marginTop="50px"
             android:layout_marginBottom="10dp"
             android:text="Gas or Alcohol?"
             android:textAlignment="center"
             android:textSize="34sp"
-            style="@style/TITLE"
             android:textStyle="bold" />
 
         <EditText
@@ -78,13 +78,12 @@
 
             <TextView
                 android:id="@+id/textView"
+                style="@style/SWITCH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10px"
                 android:layout_marginVertical="10px"
-                android:layout_weight="1"
-                android:text="Chose the factor"
-                style="@style/SWITCH" />
+                android:layout_weight="1" />
 
             <Switch
                 android:id="@+id/swPercent"
@@ -106,7 +105,7 @@
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="20dp"
+            android:layout_marginTop="80px"
             android:text="Calculate" />
 
         <TextView
@@ -115,10 +114,10 @@
             android:layout_width="306dp"
             android:layout_height="35dp"
             android:layout_marginLeft="60px"
-            android:layout_marginTop="30px"
+            android:layout_marginTop="50px"
             android:textAlignment="center"
             android:textFontWeight="@android:integer/config_longAnimTime"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
