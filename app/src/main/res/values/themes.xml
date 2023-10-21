@@ -6,6 +6,9 @@
         <item name="android:navigationBarColor">#FF8269</item>
     </style>
 
+    <style name="LOGO">
+    </style>
+
     <style name="SCREEN">
         <item name="android:background">#FFFFFF</item>
     </style>
