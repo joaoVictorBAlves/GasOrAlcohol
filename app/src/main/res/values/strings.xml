@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Gasolina ou Alcool</string>
-    <string name="label_gas" translatable="false">Entre com o preço da gasolina</string>
-    <string name="label_alcohol" translatable="false">Entre com o preço da gasolina</string>
+    <string name="label_gas" translatable="false">Preço da gasolina</string>
+    <string name="label_alcohol" translatable="false">Preço da Álcool</string>
     <string name="label_btn" translatable="false">Calcular</string>
+    <string name="pre_o_da_gasolina">preço da gasolina</string>
+    <string name="_75">75%</string>
+    <string name="titulo_do_app_gasolina_ou_alcool">Titulo do App: Gasolina ou Alcool</string>
+    <string name="texto_para_resultado">Texto para Resultado</string>
+    <string name="logo_do_app_uma_gota_e_uma_mangueira_de_abastecimento_dentro_da_gota">Logo do APP, Uma Gota e uma Mangueira de Abastecimento dentro da gota</string>
+    <string name="uma_bomba_de_gasolina_ilustrando_o_app">uma bomba de gasolina ilustrando o app</string>
+    <string name="campo_de_formul_rio_pre_o_do_lcool">Campo de formulário: preço do álcool</string>
 </resources>

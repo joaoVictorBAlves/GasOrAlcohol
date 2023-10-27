@@ -2,124 +2,138 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/SCREEN"
+    android:minHeight="60dp"
+    android:contentDescription="@string/logo_do_app_uma_gota_e_uma_mangueira_de_abastecimento_dentro_da_gota"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="600dp"
-        android:background="@drawable/rounded_layout"
-        style="@style/FORM"
-        android:orientation="vertical"
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/LOGO"
+        android:layout_width="171dp"
+        android:layout_height="196dp"
+        android:contentDescription="@string/uma_bomba_de_gasolina_ilustrando_o_app"
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074"
+        app:srcCompat="@mipmap/icon" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            style="@style/LOGO"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50px"
-            android:contentDescription="uma bomba de gasolina ilustrando o app"
-            android:paddingVertical="10dp"
-            android:textAlignment="center"
-            android:visibility="visible"
-            app:srcCompat="@mipmap/icon" />
+    <EditText
+        android:id="@+id/edGas"
+        style="@style/INPUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:hint="@string/label_gas"
+        android:inputType="numberDecimal"
+        android:maxWidth="293dp"
+        android:minWidth="293dp"
+        android:minHeight="60dp"
+        android:outlineProvider="bounds"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edAlcohol"
+        tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/edTitle"
-            style="@style/TITLE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50px"
-            android:layout_marginBottom="10dp"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+    <Switch
+        android:id="@+id/swPercent"
+        style="@style/SWITCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="#000000"
+        android:checked="false"
+        android:minHeight="50dp"
+        android:scrollbarSize="20dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:switchMinWidth="60dp"
+        android:text="@string/_75"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edGas"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-        <EditText
-            android:id="@+id/edGas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="60px"
-            android:layout_marginBottom="20px"
-            style="@style/INPUT"
-            android:hint="@string/label_gas"
-            android:inputType="numberDecimal"
-            android:outlineProvider="bounds" />
+    <Button
+        android:id="@+id/btCalcular"
+        style="@style/BUTTON"
+        android:layout_width="wrap_content"
+        android:maxWidth="184dp"
+        android:minWidth="184dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="60dp"
+        android:layout_marginTop="21dp"
+        android:minHeight="60dp"
+        android:text="@string/label_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swPercent"
+        app:layout_constraintVertical_bias="0.188" />
 
-        <EditText
-            android:id="@+id/edAlcohol"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="60px"
-            android:layout_marginTop="20px"
-            android:layout_marginBottom="20px"
-            style="@style/INPUT"
-            android:ems="10"
-            android:hint="@string/label_alcohol"
-            android:inputType="numberDecimal"
-            android:outlineProvider="bounds" />
+    <TextView
+        android:id="@+id/edTitle"
+        style="@style/TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/titulo_do_app_gasolina_ou_alcool"
+        android:minHeight="60dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <LinearLayout
-            android:layout_width="305dp"
-            android:layout_height="31dp"
-            android:layout_marginLeft="60px"
-            android:layout_marginTop="20px"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/edResult"
+        style="@style/RESPONSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/texto_para_resultado"
+        android:textAlignment="center"
+        android:textFontWeight="@android:integer/config_longAnimTime"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular"
+        app:layout_constraintVertical_bias="0.03" />
 
-            <TextView
-                android:id="@+id/textView"
-                style="@style/SWITCH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10px"
-                android:layout_marginVertical="10px"
-                android:layout_weight="1" />
+    <EditText
+        android:id="@+id/edAlcohol"
+        style="@style/INPUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/label_alcohol"
+        android:inputType="numberDecimal"
+        android:maxWidth="293dp"
+        android:minWidth="293dp"
+        android:minHeight="60dp"
+        android:outlineProvider="bounds"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle"
+        tools:ignore="ContentDescription" />
 
-            <Switch
-                android:id="@+id/swPercent"
-                style="@style/SWITCH"
-                android:layout_width="wrap_content"
-                android:layout_height="14dp"
-                android:layout_gravity="right"
-                android:backgroundTint="#000000"
-                android:checked="false"
-                android:text="75%"
-                tools:ignore="UseSwitchCompatOrMaterialXml"
-                />
-
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btCalcular"
-            style="@style/BUTTON"
-            android:layout_width="172dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="80px"
-            android:text="@string/label_btn" />
-
-        <TextView
-            android:id="@+id/edResult"
-            style="@style/RESPONSE"
-            android:layout_width="306dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="60px"
-            android:layout_marginTop="50px"
-            android:textAlignment="center"
-            android:textFontWeight="@android:integer/config_longAnimTime"
-            android:textSize="18sp" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

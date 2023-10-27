@@ -1,8 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AlcoolOuGasolina" parent="Theme.AppCompat.DayNight">
+    <style name="Theme.AlcoolOuGasolina" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:navigationBarColor">#FF8269</item>
         <item name="colorPrimary">#FF8269</item>
+
     </style>
 
     <style name="LOGO">
@@ -34,7 +35,7 @@
 
     <style name="BUTTON">
         <item name="android:textColor">#FFF</item>
-        <item name="android:backgroundTint">#FF8269</item>
+        <item name="android:backgroundTint">#D14529</item>
     </style>
 
     <style name="RESPONSE">
